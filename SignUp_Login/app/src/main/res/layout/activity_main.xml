@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
     <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -18,11 +17,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:fontFamily="sans-serif-medium"
             android:text="Welcome Back!"
+            android:textSize="30sp"
             android:textColor="@color/colorPrimary"
-            android:textSize="40sp" />
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="16dp" />
 
         <EditText
             android:id="@+id/email_edit"
@@ -32,7 +31,7 @@
             android:inputType="textEmailAddress"
             android:backgroundTint="@color/colorPrimary"
             android:textColor="@color/white"
-            android:textColorHint="@color/darkGray"
+            android:textColorHint="@color/lightGray"
             android:padding="12dp"
             android:layout_marginBottom="12dp" />
 
@@ -44,7 +43,7 @@
             android:inputType="textPassword"
             android:backgroundTint="@color/colorPrimary"
             android:textColor="@color/white"
-            android:textColorHint="@color/darkGray"
+            android:textColorHint="@color/lightGray"
             android:padding="12dp"
             android:layout_marginBottom="24dp" />
 
@@ -55,26 +54,32 @@
             android:text="Login"
             android:backgroundTint="@color/colorPrimary"
             android:textColor="@color/white"
-            android:layout_marginBottom="12dp" />
+            android:layout_marginBottom="16dp" />
 
-        <TextView
-            android:id="@+id/signupText"
+        <!-- Don't have an account? -->
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:padding="10dp"
-            android:text="Not yet registered?"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="17sp" />
+            android:orientation="horizontal"
+            android:gravity="center">
 
-        <Button
-            android:id="@+id/signup_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorAccent"
-            android:text="Sign Up"
-            android:textColor="@color/black" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account?"
+                android:textColor="@color/lightGray"
+                android:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/signup_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Sign Up"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="sans-serif-medium"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
